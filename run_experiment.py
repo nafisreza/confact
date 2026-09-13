@@ -11,7 +11,8 @@ Usage:
     python src/evaluate.py --csv results/results.csv
 
 If a run dies partway (e.g. free-tier daily token cap), rerun with
---resume to keep existing rows and continue from the first unfinished claim.
+--resume: it keeps every (claim, strategy) row that produced a parseable
+prediction and re-runs only missing or unparsed ones.
 """
 import argparse
 import json
@@ -29,22 +30,31 @@ OUT_PATH = "results/results.csv"
 RAW_OUT_PATH = "results/raw_responses.jsonl"
 
 
-def _completed_claim_ids():
-    """Claim ids that already have a row for every strategy in results.csv."""
-    if not os.path.exists(OUT_PATH):
-        return set()
-    counts = {}
-    with open(OUT_PATH, newline="") as f:
-        for row in csv.DictReader(f):
-            counts[row["claim_id"]] = counts.get(row["claim_id"], 0) + 1
-    return {cid for cid, n in counts.items() if n >= len(STRATEGIES)}
+def _load_good_rows():
+    """Existing (claim_id, strategy) pairs whose prediction parsed, plus the
+    matching csv rows and raw jsonl entries, so a resumed run can keep them
+    and redo everything else (missing claims AND unparsed/truncated answers)."""
+    good_rows, good_raw = [], []
+    if os.path.exists(OUT_PATH):
+        with open(OUT_PATH, newline="") as f:
+            for row in csv.DictReader(f):
+                if row["prediction"]:
+                    good_rows.append(row)
+    good_keys = {(r["claim_id"], r["strategy"]) for r in good_rows}
+    if os.path.exists(RAW_OUT_PATH):
+        with open(RAW_OUT_PATH) as f:
+            for line in f:
+                d = json.loads(line)
+                if (str(d["claim_id"]), d["strategy"]) in good_keys:
+                    good_raw.append(line)
+    return good_rows, good_raw, good_keys
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--resume", action="store_true",
-                        help="keep existing results and continue from the "
-                             "first claim without a full set of predictions")
+                        help="keep (claim, strategy) rows that already have a "
+                             "parseable prediction; re-run only the rest")
     args = parser.parse_args()
 
     with open(DATA_PATH) as f:
@@ -55,43 +65,53 @@ def main():
               "Predictions will be placeholders, not real experiment results. "
               "Set the key to get real results.\n")
 
-    done = _completed_claim_ids() if args.resume else set()
-    if done:
-        claims = [c for c in claims if str(c["id"]) not in done]
-        print(f"Resuming: {len(done)} claims already complete, "
-              f"{len(claims)} remaining.")
-    if not claims:
-        print("Nothing to do -- all claims already have predictions.")
+    good_rows, good_raw, good_keys = _load_good_rows() if args.resume else ([], [], set())
+
+    todo = [(claim, s) for claim in claims for s in STRATEGIES
+            if (str(claim["id"]), s) not in good_keys]
+    if good_keys:
+        print(f"Resuming: keeping {len(good_keys)} good predictions, "
+              f"re-running {len(todo)} (claim, strategy) pairs.")
+    if not todo:
+        print("Nothing to do -- all claims already have parseable predictions.")
         return
 
-    mode = "a" if done else "w"
     fieldnames = ["claim_id", "claim", "gold_answer", "strategy", "prediction", "correct"]
-    with open(OUT_PATH, mode, newline="") as out_f, open(RAW_OUT_PATH, mode) as raw_f:
+    with open(OUT_PATH, "w", newline="") as out_f, open(RAW_OUT_PATH, "w") as raw_f:
         writer = csv.DictWriter(out_f, fieldnames=fieldnames)
-        if not done:
-            writer.writeheader()
+        writer.writeheader()
+        for row in good_rows:
+            writer.writerow(row)
+        for line in good_raw:
+            raw_f.write(line)
+        out_f.flush()
+        raw_f.flush()
 
-        for claim in tqdm(claims, desc="Claims"):
-            results, passages = run_claim(claim, strategies=list(STRATEGIES.keys()))
-            for strategy_name, r in results.items():
-                pred = r["prediction"]
-                writer.writerow({
-                    "claim_id": claim["id"],
-                    "claim": claim["claim"],
-                    "gold_answer": claim["answer"],
-                    "strategy": strategy_name,
-                    "prediction": pred,
-                    "correct": (pred == claim["answer"]) if pred else False,
-                })
-                raw_f.write(json.dumps({
-                    "claim_id": claim["id"],
-                    "strategy": strategy_name,
-                    "raw_response": r["raw"],
-                    "passages_used": [
-                        {"domain": p["domain"], "credibility": p["background"]["credibility_label"]}
-                        for p in passages
-                    ],
-                }) + "\n")
+        # One (claim, strategy) pair per iteration, flushed immediately, so a
+        # mid-run crash (rate limit) never loses completed API calls.
+        for claim, strategy_name in tqdm(todo, desc="Calls"):
+            results, passages = run_claim(claim, strategies=[strategy_name])
+            r = results[strategy_name]
+            pred = r["prediction"]
+            writer.writerow({
+                "claim_id": claim["id"],
+                "claim": claim["claim"],
+                "gold_answer": claim["answer"],
+                "strategy": strategy_name,
+                "prediction": pred,
+                "correct": (pred == claim["answer"]) if pred else False,
+            })
+            raw_f.write(json.dumps({
+                "claim_id": claim["id"],
+                "strategy": strategy_name,
+                "raw_response": r["raw"],
+                "passages_used": [
+                    {"domain": p["domain"], "credibility": p["background"]["credibility_label"]}
+                    for p in passages
+                ],
+            }) + "\n")
+            out_f.flush()
+            raw_f.flush()
 
     print(f"\nDone. Wrote {OUT_PATH} and {RAW_OUT_PATH}")
 

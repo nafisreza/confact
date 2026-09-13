@@ -37,7 +37,9 @@ def _load_dotenv():
 _load_dotenv()
 
 MODEL = os.environ.get("GROQ_MODEL", "qwen/qwen3.8-27b")
-MAX_TOKENS = 700
+# Generous cap: Qwen-3's chain-of-thought answers regularly exceed 700 tokens,
+# and truncation cuts off the final "Answer: Yes/No" line the parser needs.
+MAX_TOKENS = 2000
 # Free-tier rate limits are ~30 requests/min; keep a small gap between calls.
 _MIN_SECONDS_BETWEEN_CALLS = 2.1
 _last_call_time = 0.0
