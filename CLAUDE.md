@@ -17,8 +17,8 @@ when the credibility info is added at answer-generation time combined with
 chain-of-thought reasoning.
 
 This project reproduces that core finding at small scale: 30 real claims
-from the paper's actual CONFACT dataset, 1 LLM (Claude, via Anthropic API),
-5 answering strategies (2 baselines, 3 source-aware). Full scope/limitations
+from the paper's actual CONFACT dataset, 1 LLM (LLaMA-3.1-8B via the Groq
+free-tier API), 5 answering strategies (2 baselines, 3 source-aware). Full scope/limitations
 are documented in `README.md` — read that first for the "why" behind design
 decisions; this file is about the "what's where" for making code changes.
 
@@ -40,10 +40,11 @@ src/strategies.py    -- 5 prompt-building functions in STRATEGIES dict:
         │                SF, SBA_dir, SBA_CoT (credibility-aware)
         │                each calls llm_client.call_llm() and returns raw text
         ▼
-src/llm_client.py    -- call_llm(prompt): wraps Anthropic Messages API.
-        │                Falls back to MOCK MODE (deterministic placeholder
-        │                answers) if ANTHROPIC_API_KEY is unset -- this lets
-        │                the whole pipeline be tested without API cost.
+src/llm_client.py    -- call_llm(prompt): wraps the Groq chat-completions
+        │                API (with free-tier rate-limit throttling). Falls
+        │                back to MOCK MODE (deterministic placeholder
+        │                answers) if GROQ_API_KEY is unset -- this lets
+        │                the whole pipeline be tested without API access.
         ▼
 src/pipeline.py       -- run_claim(claim): runs retrieval -> credibility
         │                annotation -> all 5 strategies for one claim
@@ -84,10 +85,11 @@ note it uses a fixed `SEED` so re-running should reproduce the same subset.
   `trim_claim()` in `build_dataset.py` and the `answer` field in
   `confact_subset.json`).
 - `llm_client.py`'s mock mode is intentional scaffolding, not a bug — it lets
-  the pipeline run and be tested without `ANTHROPIC_API_KEY` set. Don't
+  the pipeline run and be tested without `GROQ_API_KEY` set. Don't
   remove it; if you change the mock's behavior, keep it clearly labeled as
   mock output in both the returned text and any docs.
-- Model name lives in one place: `llm_client.MODEL`. Swapping models (or
+- Model selection lives in one place: `llm_client.MODEL`, read from the
+  `GROQ_MODEL` env var (default `llama-3.1-8b-instant`). Swapping models (or
   providers) should only require editing this file.
 - Credibility scores map MBFC's categorical labels (`high`, `mostly
   factual`, `mixed`, `low`, `very low`, `unknown`) to numbers in
@@ -99,7 +101,7 @@ note it uses a fixed `SEED` so re-running should reproduce the same subset.
 
 ```bash
 pip install -r requirements.txt
-export ANTHROPIC_API_KEY=sk-ant-...   # omit to run in mock mode
+export GROQ_API_KEY=gsk_...   # free at console.groq.com; omit to run in mock mode
 python run_experiment.py
 python src/evaluate.py --csv results/results.csv
 PYTHONPATH=src python src/analysis.py
@@ -114,7 +116,7 @@ PYTHONPATH=src python src/build_demo.py   # then open results/demo.html
   mock-mode run (placeholder, not real answers) — `demo.html` even shows an
   in-page warning banner for this. Don't treat their current contents as
   real experimental findings when writing docs/slides — they need to be
-  regenerated with a real `ANTHROPIC_API_KEY` first (`run_experiment.py` →
+  regenerated with a real `GROQ_API_KEY` first (`run_experiment.py` →
   `evaluate.py` → `analysis.py` → `build_demo.py`, in that order).
 - This is a small (30-claim), single-model project by design — see
   `README.md` §2 "What we implemented (and why we scoped it down)" before

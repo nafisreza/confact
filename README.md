@@ -39,7 +39,7 @@ architecture identical** but scoped the *scale*:
 
 | Paper | This project |
 |---|---|
-| 3 LLMs (LLaMA-3.1, Qwen-2, Mistral) | 1 LLM (Claude, via Anthropic API — swappable) |
+| 3 LLMs (LLaMA-3.1, Qwen-2, Mistral) | 1 LLM (LLaMA-3.1-8B via Groq's free API — same model family as the paper, swappable via `GROQ_MODEL`) |
 | ModC (611) + HumC (287) claims | 30-claim curated subset of the **real** CONFACT data |
 | 7 baseline + 11 source-aware method variants | 2 baselines (DirA, CoT) + 3 source-aware (SF, SBA_dir, SBA_CoT) |
 | Trained credibility-score predictor (Hybrid-MB) | Direct MBFC rating → score mapping (GT-MB only) |
@@ -87,7 +87,7 @@ confact_project/
 │   ├── retrieval.py           # chunking + TF-IDF ranking (Stage 1-2)
 │   ├── credibility.py         # MBFC-backed source background provider (GT-MB)
 │   ├── strategies.py          # prompt templates for DirA / CoT / SF / SBA_dir / SBA_CoT
-│   ├── llm_client.py          # Anthropic API wrapper (+ mock mode w/o API key)
+│   ├── llm_client.py          # Groq API wrapper (+ mock mode w/o API key)
 │   ├── pipeline.py            # orchestrates one claim end-to-end
 │   ├── evaluate.py            # Accuracy + Macro-F1 per strategy
 │   ├── analysis.py            # bar chart + qualitative error examples
@@ -109,8 +109,7 @@ confact_project/
 ```bash
 pip install -r requirements.txt
 
-# Get an Anthropic API key from https://console.anthropic.com/ and set it:
-export ANTHROPIC_API_KEY=sk-ant-...
+export GROQ_API_KEY=gsk_...   # get one free, no card, at console.groq.com
 
 # (Optional) rebuild the dataset subset from scratch — already included in data/
 python src/build_dataset.py
@@ -128,12 +127,15 @@ PYTHONPATH=src python src/analysis.py
 PYTHONPATH=src python src/build_demo.py
 ```
 
-If `ANTHROPIC_API_KEY` is not set, everything still runs in **mock mode** so
+If `GROQ_API_KEY` is not set, everything still runs in **mock mode** so
 you can verify the pipeline works, but predictions are placeholders, not real
 results — you need a real key for actual experiment numbers.
 
-Estimated cost: 30 claims × 5 strategies = 150 API calls, each with a few
-thousand input tokens — a few dollars on Claude Sonnet.
+Cost: 30 claims × 5 strategies = 150 API calls — comfortably within Groq's
+free tier (the client throttles itself to stay under the free-tier rate
+limit, so a full run takes a few minutes). The model defaults to
+`llama-3.1-8b-instant`; set `GROQ_MODEL` to any model id from
+https://console.groq.com/docs/models to try another.
 
 ## 5. Demoing the project
 

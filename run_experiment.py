@@ -6,7 +6,7 @@ every claim in data/confact_subset.json, and writes per-claim predictions to
 results/results.csv.
 
 Usage:
-    export ANTHROPIC_API_KEY=sk-ant-...
+    export GROQ_API_KEY=gsk_...
     python run_experiment.py
     python src/evaluate.py --csv results/results.csv
 """
@@ -29,8 +29,8 @@ def main():
     with open(DATA_PATH) as f:
         claims = json.load(f)
 
-    if os.environ.get("ANTHROPIC_API_KEY") is None:
-        print("WARNING: ANTHROPIC_API_KEY is not set -- running in MOCK mode. "
+    if os.environ.get("GROQ_API_KEY") is None:
+        print("WARNING: GROQ_API_KEY is not set -- running in MOCK mode. "
               "Predictions will be placeholders, not real experiment results. "
               "Set the key to get real results.\n")
 

@@ -345,7 +345,7 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
 
 if (DATA.is_mock) {
   document.getElementById("mockBannerSlot").innerHTML =
-    '<div class="mock-banner">⚠ This data was generated in MOCK MODE (no ANTHROPIC_API_KEY was set during run_experiment.py) — predictions and reasoning below are placeholders, not real model output. Re-run with a real API key before presenting.</div>';
+    '<div class="mock-banner">⚠ This data was generated in MOCK MODE (no GROQ_API_KEY was set during run_experiment.py) — predictions and reasoning below are placeholders, not real model output. Re-run with a real API key before presenting.</div>';
 }
 
 renderSummary();
@@ -365,7 +365,7 @@ def main():
     print(f"Wrote {OUT_HTML}  ({len(html)/1024:.0f} KB)")
     if data["is_mock"]:
         print("NOTE: current results are MOCK MODE placeholders -- "
-              "re-run run_experiment.py with a real ANTHROPIC_API_KEY, "
+              "re-run run_experiment.py with a real GROQ_API_KEY, "
               "then re-run this script, before presenting.")
 
 
