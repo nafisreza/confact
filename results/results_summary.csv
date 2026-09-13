@@ -1,6 +1,6 @@
 strategy,n,accuracy,macro_f1,unparsed
 SBA_CoT,30,0.6333,0.6229,0
-SF,30,0.6,0.6,0
 DirA,30,0.6,0.6,0
+SF,30,0.6,0.6,0
 CoT,30,0.4,0.4,0
 SBA_dir,30,0.3667,0.3486,0
