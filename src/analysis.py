@@ -7,6 +7,8 @@ Produces:
      but a source-aware strategy (SBA_CoT) got it right, and vice versa --
      useful for the "Results" and "Challenges & Limitations" slides.
 """
+import os
+
 import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
@@ -14,9 +16,10 @@ import matplotlib.pyplot as plt
 
 from evaluate import evaluate
 
-RESULTS_CSV = "/home/claude/confact_project/results/results.csv"
-SUMMARY_PNG = "/home/claude/confact_project/results/strategy_comparison.png"
-ERROR_MD = "/home/claude/confact_project/results/error_examples.md"
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RESULTS_CSV = os.path.join(_ROOT, "results", "results.csv")
+SUMMARY_PNG = os.path.join(_ROOT, "results", "strategy_comparison.png")
+ERROR_MD = os.path.join(_ROOT, "results", "error_examples.md")
 
 
 def plot_comparison(summary_df):

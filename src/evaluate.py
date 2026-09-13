@@ -5,6 +5,8 @@ Computes Accuracy and Macro-F1 per strategy (the paper's two metrics,
 Section 4.1), from the predictions CSV produced by run_experiment.py.
 """
 import argparse
+import os
+
 import pandas as pd
 from sklearn.metrics import accuracy_score, f1_score
 
@@ -35,7 +37,11 @@ def evaluate(csv_path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--csv", default="/home/claude/confact_project/results/results.csv")
+    _default_csv = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        "results", "results.csv",
+    )
+    parser.add_argument("--csv", default=_default_csv)
     args = parser.parse_args()
     summary = evaluate(args.csv)
     print(summary.to_string(index=False))

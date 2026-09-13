@@ -11,8 +11,12 @@ here it's a direct mapping from MBFC's own label rather than a trained
 predictor, since we use MBFC as ground truth (GT-MB setting).
 """
 import json
+import os
 
-MBFC_LOOKUP_PATH = "/home/claude/confact_project/data/mbfc_lookup.json"
+MBFC_LOOKUP_PATH = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    "data", "mbfc_lookup.json",
+)
 
 # MBFC's own credibility vocabulary -> a numeric score, low = less trustworthy
 CREDIBILITY_SCORE_MAP = {

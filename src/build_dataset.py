@@ -11,11 +11,17 @@ mbfc_media_data.pkl). Run once; outputs land in data/.
 import pickle
 import gzip
 import json
+import os
 import random
 from urllib.parse import urlparse
 
-RAW_DIR = "/home/claude/confact_extract/CONFACT-main/data/dataset"
-OUT_DIR = "/home/claude/confact_project/data"
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Where the original CONFACT release (HumC.pkl.gz, ModC.pkl.gz,
+# mbfc_media_data.pkl) was unpacked -- not in this repo; override as needed.
+RAW_DIR = os.environ.get(
+    "CONFACT_RAW_DIR", os.path.join(_ROOT, "CONFACT-main", "data", "dataset")
+)
+OUT_DIR = os.path.join(_ROOT, "data")
 N_CLAIMS = 30
 MIN_CONTENT_LEN = 300
 MIN_DOCS_WITH_CONTENT = 2
