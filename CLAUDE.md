@@ -17,7 +17,7 @@ when the credibility info is added at answer-generation time combined with
 chain-of-thought reasoning.
 
 This project reproduces that core finding at small scale: 30 real claims
-from the paper's actual CONFACT dataset, 1 LLM (LLaMA-3.1-8B via the Groq
+from the paper's actual CONFACT dataset, 1 LLM (Qwen-3 27B via the Groq
 free-tier API), 5 answering strategies (2 baselines, 3 source-aware). Full scope/limitations
 are documented in `README.md` — read that first for the "why" behind design
 decisions; this file is about the "what's where" for making code changes.
@@ -89,8 +89,9 @@ note it uses a fixed `SEED` so re-running should reproduce the same subset.
   remove it; if you change the mock's behavior, keep it clearly labeled as
   mock output in both the returned text and any docs.
 - Model selection lives in one place: `llm_client.MODEL`, read from the
-  `GROQ_MODEL` env var (default `llama-3.1-8b-instant`). Swapping models (or
-  providers) should only require editing this file.
+  `GROQ_MODEL` env var (default `qwen/qwen3.8-27b`). Swapping models (or
+  providers) should only require editing this file. `llm_client` also loads
+  a repo-root `.env` file at import time (without overriding real env vars).
 - Credibility scores map MBFC's categorical labels (`high`, `mostly
   factual`, `mixed`, `low`, `very low`, `unknown`) to numbers in
   `credibility.CREDIBILITY_SCORE_MAP` — this is the paper's "GT-MB" setting
@@ -101,7 +102,7 @@ note it uses a fixed `SEED` so re-running should reproduce the same subset.
 
 ```bash
 pip install -r requirements.txt
-export GROQ_API_KEY=gsk_...   # free at console.groq.com; omit to run in mock mode
+export GROQ_API_KEY=gsk_...   # or put it in .env; omit entirely to run in mock mode
 python run_experiment.py
 python src/evaluate.py --csv results/results.csv
 PYTHONPATH=src python src/analysis.py

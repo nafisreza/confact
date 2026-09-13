@@ -39,7 +39,7 @@ architecture identical** but scoped the *scale*:
 
 | Paper | This project |
 |---|---|
-| 3 LLMs (LLaMA-3.1, Qwen-2, Mistral) | 1 LLM (LLaMA-3.1-8B via Groq's free API — same model family as the paper, swappable via `GROQ_MODEL`) |
+| 3 LLMs (LLaMA-3.1, Qwen-2, Mistral) | 1 LLM (Qwen-3 27B via Groq's free API — successor of the paper's Qwen-2, swappable via `GROQ_MODEL`) |
 | ModC (611) + HumC (287) claims | 30-claim curated subset of the **real** CONFACT data |
 | 7 baseline + 11 source-aware method variants | 2 baselines (DirA, CoT) + 3 source-aware (SF, SBA_dir, SBA_CoT) |
 | Trained credibility-score predictor (Hybrid-MB) | Direct MBFC rating → score mapping (GT-MB only) |
@@ -109,7 +109,9 @@ confact_project/
 ```bash
 pip install -r requirements.txt
 
-export GROQ_API_KEY=gsk_...   # get one free, no card, at console.groq.com
+# Get a free key (no card) at console.groq.com, then either export it:
+export GROQ_API_KEY=gsk_...
+# ...or put `GROQ_API_KEY=gsk_...` in a .env file at the repo root (gitignored)
 
 # (Optional) rebuild the dataset subset from scratch — already included in data/
 python src/build_dataset.py
@@ -134,7 +136,7 @@ results — you need a real key for actual experiment numbers.
 Cost: 30 claims × 5 strategies = 150 API calls — comfortably within Groq's
 free tier (the client throttles itself to stay under the free-tier rate
 limit, so a full run takes a few minutes). The model defaults to
-`llama-3.1-8b-instant`; set `GROQ_MODEL` to any model id from
+`qwen/qwen3.8-27b`; set `GROQ_MODEL` to any model id from
 https://console.groq.com/docs/models to try another.
 
 ## 5. Demoing the project
