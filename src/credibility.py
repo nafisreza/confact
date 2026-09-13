@@ -12,6 +12,7 @@ predictor, since we use MBFC as ground truth (GT-MB setting).
 """
 import json
 import os
+from functools import lru_cache
 
 MBFC_LOOKUP_PATH = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
@@ -32,17 +33,30 @@ with open(MBFC_LOOKUP_PATH) as f:
     _MBFC = json.load(f)
 
 
-def get_background(domain):
-    """Return {domain, credibility_label, credibility_score, summary} for a domain."""
+@lru_cache(maxsize=None)
+def _lookup(domain):
+    """Cached MBFC lookup + label/score normalization for one domain."""
     entry = _MBFC.get(domain, {"media": domain, "credibility": "unknown", "summary": ""})
     label = (entry.get("credibility") or "unknown").lower()
-    score = CREDIBILITY_SCORE_MAP.get(label, 0.5)
+    return (
+        entry.get("media", domain),
+        label,
+        CREDIBILITY_SCORE_MAP.get(label, 0.5),
+        entry.get("summary", ""),
+    )
+
+
+def get_background(domain):
+    """Return {domain, credibility_label, credibility_score, summary} for a domain."""
+    media_name, label, score, summary = _lookup(domain)
+    # Build a fresh dict per call: callers attach these to passages, so sharing
+    # one cached dict across passages would make them aliases of each other.
     return {
         "domain": domain,
-        "media_name": entry.get("media", domain),
+        "media_name": media_name,
         "credibility_label": label,
         "credibility_score": score,
-        "summary": entry.get("summary", ""),
+        "summary": summary,
     }
 
 

@@ -8,15 +8,17 @@ Documents are chunked into paragraphs, then ranked against the claim/question
 using TF-IDF cosine similarity (a lightweight stand-in for the paper's
 learned reranker). The top-K paragraphs are returned for answer generation.
 """
+import heapq
 import re
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
+
+_WHITESPACE_RE = re.compile(r"\s+")
 
 
 def chunk_paragraphs(text, max_words=120):
     """Paragraph-level chunking (paper finds this outperforms sentence-level,
     Section 5.2 'Impact of Chunking Strategies')."""
-    text = re.sub(r"\s+", " ", text).strip()
+    text = _WHITESPACE_RE.sub(" ", text).strip()
     words = text.split(" ")
     chunks = []
     for i in range(0, len(words), max_words):
@@ -53,9 +55,13 @@ def rank_passages(question, passages, top_k=6):
     except ValueError:
         # degenerate corpus (e.g. all stopwords) -> fall back to original order
         return passages[:top_k]
-    sims = cosine_similarity(matrix[0:1], matrix[1:]).flatten()
-    ranked = sorted(zip(sims, passages), key=lambda x: -x[0])
-    return [p for _, p in ranked[:top_k]]
+    # TfidfVectorizer L2-normalizes its rows, so the cosine similarity is just
+    # the dot product with the question vector -- same values, no re-normalizing.
+    sims = (matrix[1:] @ matrix[0].T).toarray().ravel()
+    # nlargest matches sorted(..., reverse=True)[:top_k], ties included, without
+    # fully sorting every passage to keep only top_k.
+    top = heapq.nlargest(top_k, range(len(passages)), key=sims.__getitem__)
+    return [passages[i] for i in top]
 
 
 def get_relevant_passages(claim, top_k=6):

@@ -16,7 +16,6 @@ Usage:
 """
 import json
 import os
-import sys
 
 import pandas as pd
 
@@ -59,19 +58,23 @@ def build_data():
 
     is_mock = any("[MOCK MODE" in txt for d in raw_by_claim.values() for txt in d.values())
 
+    # Index (claim_id, strategy) -> first matching row in one pass, instead of
+    # re-scanning the frame for every claim and again for every strategy.
+    rows_by_key = {}
+    for row in df.itertuples(index=False):
+        rows_by_key.setdefault((int(row.claim_id), row.strategy), row)
+
     out_claims = []
     for c in claims:
         cid = c["id"]
-        sub = df[df["claim_id"] == cid]
         strat_results = {}
         for s in STRATEGY_ORDER:
-            row = sub[sub["strategy"] == s]
-            if row.empty:
+            row = rows_by_key.get((cid, s))
+            if row is None:
                 continue
-            row = row.iloc[0]
             strat_results[s] = {
-                "prediction": None if pd.isna(row["prediction"]) else row["prediction"],
-                "correct": bool(row["correct"]),
+                "prediction": None if pd.isna(row.prediction) else row.prediction,
+                "correct": bool(row.correct),
                 "raw": raw_by_claim.get(cid, {}).get(s, ""),
             }
         out_claims.append({

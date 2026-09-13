@@ -41,22 +41,23 @@ def plot_comparison(summary_df):
 
 def find_error_examples(df, baseline="DirA", best="SBA_CoT", n=3):
     pivot = df.pivot(index="claim_id", columns="strategy", values="correct")
+    # One claim_id -> (claim, gold) table, instead of re-scanning the whole
+    # frame twice per example below.
+    by_claim = df.drop_duplicates("claim_id").set_index("claim_id")
     lines = ["# Qualitative Error Examples\n"]
 
     improved = pivot[(pivot[baseline] == False) & (pivot[best] == True)].index.tolist()  # noqa: E712
     lines.append(f"## Cases where {best} fixed a {baseline} mistake ({len(improved)} found)\n")
     for cid in improved[:n]:
-        claim_text = df[df["claim_id"] == cid]["claim"].iloc[0]
-        gold = df[df["claim_id"] == cid]["gold_answer"].iloc[0]
-        lines.append(f"- Claim #{cid}: \"{claim_text}\" (gold: {gold})")
+        row = by_claim.loc[cid]
+        lines.append(f"- Claim #{cid}: \"{row['claim']}\" (gold: {row['gold_answer']})")
 
     regressed = pivot[(pivot[baseline] == True) & (pivot[best] == False)].index.tolist()  # noqa: E712
     lines.append(f"\n## Cases where {best} introduced an error {baseline} didn't have "
                   f"({len(regressed)} found)\n")
     for cid in regressed[:n]:
-        claim_text = df[df["claim_id"] == cid]["claim"].iloc[0]
-        gold = df[df["claim_id"] == cid]["gold_answer"].iloc[0]
-        lines.append(f"- Claim #{cid}: \"{claim_text}\" (gold: {gold})")
+        row = by_claim.loc[cid]
+        lines.append(f"- Claim #{cid}: \"{row['claim']}\" (gold: {row['gold_answer']})")
 
     with open(ERROR_MD, "w") as f:
         f.write("\n".join(lines))
@@ -65,6 +66,6 @@ def find_error_examples(df, baseline="DirA", best="SBA_CoT", n=3):
 
 if __name__ == "__main__":
     df = pd.read_csv(RESULTS_CSV)
-    summary = evaluate(RESULTS_CSV)
+    summary = evaluate(RESULTS_CSV, df=df)  # reuse the frame, don't re-read
     plot_comparison(summary)
     find_error_examples(df)

@@ -11,20 +11,22 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, f1_score
 
 
-def evaluate(csv_path):
-    df = pd.read_csv(csv_path)
-    strategies = sorted(df["strategy"].unique())
+def evaluate(csv_path, df=None):
+    """Per-strategy Accuracy/Macro-F1. Pass `df` to reuse an already-loaded
+    predictions frame instead of re-reading csv_path (it is never mutated)."""
+    if df is None:
+        df = pd.read_csv(csv_path)
     rows = []
-    for s in strategies:
-        sub = df[df["strategy"] == s].copy()
+    # groupby(sort=True) yields strategies in sorted order, in one pass over the
+    # frame, instead of a full boolean scan per strategy.
+    for s, sub in df.groupby("strategy", sort=True):
         # unparseable predictions count as wrong (matches the paper's treatment
         # of failure to answer as an incorrect prediction)
-        sub["pred_norm"] = sub["prediction"].fillna("Unparsed")
         y_true = sub["gold_answer"]
-        y_pred = sub["pred_norm"]
+        y_pred = sub["prediction"].fillna("Unparsed")
         acc = accuracy_score(y_true, y_pred)
         f1 = f1_score(y_true, y_pred, average="macro", labels=["Yes", "No"], zero_division=0)
-        n_unparsed = (sub["prediction"].isna()).sum()
+        n_unparsed = sub["prediction"].isna().sum()
         rows.append({
             "strategy": s,
             "n": len(sub),
