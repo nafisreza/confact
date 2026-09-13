@@ -1,13 +1,10 @@
 # Qualitative Error Examples
 
-## Cases where SBA_CoT fixed a DirA mistake (8 found)
+## Cases where SBA_CoT fixed a DirA mistake (0 found)
 
-- Claim #1: "Richer, older men in England more likely to drink to excess." (gold: Yes)
-- Claim #2: "Taller people are at a higher risk of catching the COVID-19 coronavirus disease." (gold: No)
-- Claim #4: "WhatsApp message lists out the COVID-19 situation in various countries along with travel restrictions and lockdowns." (gold: No)
 
-## Cases where SBA_CoT introduced an error DirA didn't have (7 found)
+## Cases where SBA_CoT introduced an error DirA didn't have (3 found)
 
-- Claim #6: "Saudi Arabia players to get a Rolls-Royce each for defeating Argentina." (gold: No)
-- Claim #7: "President Buhari approves the creation of state police." (gold: No)
-- Claim #8: "Donald Trump owes money to the Bank of China" (gold: No)
+- Claim #5: "In 2017, there were more marijuana arrests in this country than all violent crime arrests combined." (gold: Yes)
+- Claim #14: "Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients." (gold: Yes)
+- Claim #21: "The South African Police Service kills three times more people per capita than the United States police force" (gold: Yes)

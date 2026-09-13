@@ -1,151 +1,121 @@
 claim_id,claim,gold_answer,strategy,prediction,correct
-1,"Richer, older men in England more likely to drink to excess.",Yes,DirA,No,False
+1,"Richer, older men in England more likely to drink to excess.",Yes,DirA,Yes,True
 1,"Richer, older men in England more likely to drink to excess.",Yes,CoT,Yes,True
-1,"Richer, older men in England more likely to drink to excess.",Yes,SF,No,False
-1,"Richer, older men in England more likely to drink to excess.",Yes,SBA_dir,No,False
+1,"Richer, older men in England more likely to drink to excess.",Yes,SF,Yes,True
+1,"Richer, older men in England more likely to drink to excess.",Yes,SBA_dir,Yes,True
 1,"Richer, older men in England more likely to drink to excess.",Yes,SBA_CoT,Yes,True
-2,Taller people are at a higher risk of catching the COVID-19 coronavirus disease.,No,DirA,Yes,False
+2,Taller people are at a higher risk of catching the COVID-19 coronavirus disease.,No,DirA,No,True
 2,Taller people are at a higher risk of catching the COVID-19 coronavirus disease.,No,CoT,No,True
-2,Taller people are at a higher risk of catching the COVID-19 coronavirus disease.,No,SF,Yes,False
-2,Taller people are at a higher risk of catching the COVID-19 coronavirus disease.,No,SBA_dir,Yes,False
+2,Taller people are at a higher risk of catching the COVID-19 coronavirus disease.,No,SF,No,True
+2,Taller people are at a higher risk of catching the COVID-19 coronavirus disease.,No,SBA_dir,No,True
 2,Taller people are at a higher risk of catching the COVID-19 coronavirus disease.,No,SBA_CoT,No,True
-3,Jailing parents was an unintended consequence of a 2010 state truancy law Kamala Harris sponsored.,Yes,DirA,Yes,True
-3,Jailing parents was an unintended consequence of a 2010 state truancy law Kamala Harris sponsored.,Yes,CoT,No,False
+3,Jailing parents was an unintended consequence of a 2010 state truancy law Kamala Harris sponsored.,Yes,DirA,No,False
+3,Jailing parents was an unintended consequence of a 2010 state truancy law Kamala Harris sponsored.,Yes,CoT,Yes,True
 3,Jailing parents was an unintended consequence of a 2010 state truancy law Kamala Harris sponsored.,Yes,SF,Yes,True
-3,Jailing parents was an unintended consequence of a 2010 state truancy law Kamala Harris sponsored.,Yes,SBA_dir,No,False
-3,Jailing parents was an unintended consequence of a 2010 state truancy law Kamala Harris sponsored.,Yes,SBA_CoT,Yes,True
+3,Jailing parents was an unintended consequence of a 2010 state truancy law Kamala Harris sponsored.,Yes,SBA_dir,Yes,True
+3,Jailing parents was an unintended consequence of a 2010 state truancy law Kamala Harris sponsored.,Yes,SBA_CoT,,False
 4,WhatsApp message lists out the COVID-19 situation in various countries along with travel restrictions and lockdowns.,No,DirA,Yes,False
-4,WhatsApp message lists out the COVID-19 situation in various countries along with travel restrictions and lockdowns.,No,CoT,No,True
+4,WhatsApp message lists out the COVID-19 situation in various countries along with travel restrictions and lockdowns.,No,CoT,Yes,False
 4,WhatsApp message lists out the COVID-19 situation in various countries along with travel restrictions and lockdowns.,No,SF,Yes,False
-4,WhatsApp message lists out the COVID-19 situation in various countries along with travel restrictions and lockdowns.,No,SBA_dir,Yes,False
-4,WhatsApp message lists out the COVID-19 situation in various countries along with travel restrictions and lockdowns.,No,SBA_CoT,No,True
+4,WhatsApp message lists out the COVID-19 situation in various countries along with travel restrictions and lockdowns.,No,SBA_dir,No,True
+4,WhatsApp message lists out the COVID-19 situation in various countries along with travel restrictions and lockdowns.,No,SBA_CoT,Yes,False
 5,"In 2017, there were more marijuana arrests in this country than all violent crime arrests combined.",Yes,DirA,Yes,True
-5,"In 2017, there were more marijuana arrests in this country than all violent crime arrests combined.",Yes,CoT,No,False
+5,"In 2017, there were more marijuana arrests in this country than all violent crime arrests combined.",Yes,CoT,Yes,True
 5,"In 2017, there were more marijuana arrests in this country than all violent crime arrests combined.",Yes,SF,Yes,True
-5,"In 2017, there were more marijuana arrests in this country than all violent crime arrests combined.",Yes,SBA_dir,No,False
-5,"In 2017, there were more marijuana arrests in this country than all violent crime arrests combined.",Yes,SBA_CoT,Yes,True
+5,"In 2017, there were more marijuana arrests in this country than all violent crime arrests combined.",Yes,SBA_dir,Yes,True
+5,"In 2017, there were more marijuana arrests in this country than all violent crime arrests combined.",Yes,SBA_CoT,,False
 6,Saudi Arabia players to get a Rolls-Royce each for defeating Argentina.,No,DirA,No,True
-6,Saudi Arabia players to get a Rolls-Royce each for defeating Argentina.,No,CoT,Yes,False
+6,Saudi Arabia players to get a Rolls-Royce each for defeating Argentina.,No,CoT,No,True
 6,Saudi Arabia players to get a Rolls-Royce each for defeating Argentina.,No,SF,No,True
 6,Saudi Arabia players to get a Rolls-Royce each for defeating Argentina.,No,SBA_dir,No,True
-6,Saudi Arabia players to get a Rolls-Royce each for defeating Argentina.,No,SBA_CoT,Yes,False
+6,Saudi Arabia players to get a Rolls-Royce each for defeating Argentina.,No,SBA_CoT,No,True
 7,President Buhari approves the creation of state police.,No,DirA,No,True
-7,President Buhari approves the creation of state police.,No,CoT,Yes,False
+7,President Buhari approves the creation of state police.,No,CoT,No,True
 7,President Buhari approves the creation of state police.,No,SF,No,True
 7,President Buhari approves the creation of state police.,No,SBA_dir,No,True
-7,President Buhari approves the creation of state police.,No,SBA_CoT,Yes,False
+7,President Buhari approves the creation of state police.,No,SBA_CoT,No,True
 8,Donald Trump owes money to the Bank of China,No,DirA,No,True
-8,Donald Trump owes money to the Bank of China,No,CoT,Yes,False
+8,Donald Trump owes money to the Bank of China,No,CoT,No,True
 8,Donald Trump owes money to the Bank of China,No,SF,No,True
 8,Donald Trump owes money to the Bank of China,No,SBA_dir,No,True
-8,Donald Trump owes money to the Bank of China,No,SBA_CoT,Yes,False
-9,Former U.S. President Barack Obama wanted Russia to be out of the G-8.,Yes,DirA,No,False
+8,Donald Trump owes money to the Bank of China,No,SBA_CoT,No,True
+9,Former U.S. President Barack Obama wanted Russia to be out of the G-8.,Yes,DirA,Yes,True
 9,Former U.S. President Barack Obama wanted Russia to be out of the G-8.,Yes,CoT,Yes,True
-9,Former U.S. President Barack Obama wanted Russia to be out of the G-8.,Yes,SF,No,False
-9,Former U.S. President Barack Obama wanted Russia to be out of the G-8.,Yes,SBA_dir,No,False
+9,Former U.S. President Barack Obama wanted Russia to be out of the G-8.,Yes,SF,Yes,True
+9,Former U.S. President Barack Obama wanted Russia to be out of the G-8.,Yes,SBA_dir,Yes,True
 9,Former U.S. President Barack Obama wanted Russia to be out of the G-8.,Yes,SBA_CoT,Yes,True
 10,A mandatory seminar is now required for drivers' license renewal.,No,DirA,No,True
-10,A mandatory seminar is now required for drivers' license renewal.,No,CoT,Yes,False
+10,A mandatory seminar is now required for drivers' license renewal.,No,CoT,No,True
 10,A mandatory seminar is now required for drivers' license renewal.,No,SF,No,True
 10,A mandatory seminar is now required for drivers' license renewal.,No,SBA_dir,No,True
-10,A mandatory seminar is now required for drivers' license renewal.,No,SBA_CoT,Yes,False
+10,A mandatory seminar is now required for drivers' license renewal.,No,SBA_CoT,No,True
 11,Kenyan President Kenyatta in national day speech stated Under this administration … at Kilindini we have more than doubled the volume of cleared cargo passing [through] the port annually.,No,DirA,Yes,False
-11,Kenyan President Kenyatta in national day speech stated Under this administration … at Kilindini we have more than doubled the volume of cleared cargo passing [through] the port annually.,No,CoT,No,True
+11,Kenyan President Kenyatta in national day speech stated Under this administration … at Kilindini we have more than doubled the volume of cleared cargo passing [through] the port annually.,No,CoT,Yes,False
 11,Kenyan President Kenyatta in national day speech stated Under this administration … at Kilindini we have more than doubled the volume of cleared cargo passing [through] the port annually.,No,SF,Yes,False
-11,Kenyan President Kenyatta in national day speech stated Under this administration … at Kilindini we have more than doubled the volume of cleared cargo passing [through] the port annually.,No,SBA_dir,No,True
+11,Kenyan President Kenyatta in national day speech stated Under this administration … at Kilindini we have more than doubled the volume of cleared cargo passing [through] the port annually.,No,SBA_dir,Yes,False
 11,Kenyan President Kenyatta in national day speech stated Under this administration … at Kilindini we have more than doubled the volume of cleared cargo passing [through] the port annually.,No,SBA_CoT,Yes,False
-12,Tommy Robinson was prosecuted for causing distress to defendants in a grooming trial.,No,DirA,Yes,False
+12,Tommy Robinson was prosecuted for causing distress to defendants in a grooming trial.,No,DirA,No,True
 12,Tommy Robinson was prosecuted for causing distress to defendants in a grooming trial.,No,CoT,No,True
-12,Tommy Robinson was prosecuted for causing distress to defendants in a grooming trial.,No,SF,Yes,False
+12,Tommy Robinson was prosecuted for causing distress to defendants in a grooming trial.,No,SF,No,True
 12,Tommy Robinson was prosecuted for causing distress to defendants in a grooming trial.,No,SBA_dir,No,True
-12,Tommy Robinson was prosecuted for causing distress to defendants in a grooming trial.,No,SBA_CoT,Yes,False
-13,Republicans voted against military pay rises,Yes,DirA,Yes,True
+12,Tommy Robinson was prosecuted for causing distress to defendants in a grooming trial.,No,SBA_CoT,No,True
+13,Republicans voted against military pay rises,Yes,DirA,No,False
 13,Republicans voted against military pay rises,Yes,CoT,No,False
-13,Republicans voted against military pay rises,Yes,SF,Yes,True
+13,Republicans voted against military pay rises,Yes,SF,No,False
 13,Republicans voted against military pay rises,Yes,SBA_dir,No,False
-13,Republicans voted against military pay rises,Yes,SBA_CoT,Yes,True
-14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,DirA,No,False
+13,Republicans voted against military pay rises,Yes,SBA_CoT,No,False
+14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,DirA,Yes,True
 14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,CoT,Yes,True
-14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SF,No,False
-14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_dir,No,False
-14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_CoT,Yes,True
+14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SF,Yes,True
+14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_dir,,False
+14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_CoT,,False
 15,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,DirA,No,True
-15,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,CoT,Yes,False
+15,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,CoT,No,True
 15,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,SF,No,True
-15,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,SBA_dir,Yes,False
+15,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,SBA_dir,No,True
 15,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,SBA_CoT,No,True
-16,"Richer, older men in England more likely to drink to excess.",Yes,DirA,No,False
+16,"Richer, older men in England more likely to drink to excess.",Yes,DirA,Yes,True
 16,"Richer, older men in England more likely to drink to excess.",Yes,CoT,Yes,True
-16,"Richer, older men in England more likely to drink to excess.",Yes,SF,No,False
-16,"Richer, older men in England more likely to drink to excess.",Yes,SBA_dir,No,False
+16,"Richer, older men in England more likely to drink to excess.",Yes,SF,Yes,True
+16,"Richer, older men in England more likely to drink to excess.",Yes,SBA_dir,Yes,True
 16,"Richer, older men in England more likely to drink to excess.",Yes,SBA_CoT,Yes,True
-17,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,DirA,Yes,True
+17,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,DirA,No,False
 17,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,CoT,No,False
-17,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SF,Yes,True
-17,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_dir,No,False
-17,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_CoT,Yes,True
-18,Life expectancy in the UK is falling.,No,DirA,No,True
+17,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SF,No,False
+17,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_dir,,False
+17,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_CoT,No,False
+18,Life expectancy in the UK is falling.,No,DirA,Yes,False
 18,Life expectancy in the UK is falling.,No,CoT,Yes,False
-18,Life expectancy in the UK is falling.,No,SF,No,True
+18,Life expectancy in the UK is falling.,No,SF,Yes,False
 18,Life expectancy in the UK is falling.,No,SBA_dir,Yes,False
-18,Life expectancy in the UK is falling.,No,SBA_CoT,No,True
+18,Life expectancy in the UK is falling.,No,SBA_CoT,Yes,False
 19,Britons have spent £4bn stockpiling goods in case of no-deal Brexit.,Yes,DirA,No,False
-19,Britons have spent £4bn stockpiling goods in case of no-deal Brexit.,Yes,CoT,Yes,True
+19,Britons have spent £4bn stockpiling goods in case of no-deal Brexit.,Yes,CoT,No,False
 19,Britons have spent £4bn stockpiling goods in case of no-deal Brexit.,Yes,SF,No,False
 19,Britons have spent £4bn stockpiling goods in case of no-deal Brexit.,Yes,SBA_dir,No,False
-19,Britons have spent £4bn stockpiling goods in case of no-deal Brexit.,Yes,SBA_CoT,Yes,True
-20,"If Donald Trump is successful in dismantling the Affordable Care Act, there is no guarantee for people who have pre-existing conditions.",Yes,DirA,Yes,True
+19,Britons have spent £4bn stockpiling goods in case of no-deal Brexit.,Yes,SBA_CoT,No,False
+20,"If Donald Trump is successful in dismantling the Affordable Care Act, there is no guarantee for people who have pre-existing conditions.",Yes,DirA,No,False
 20,"If Donald Trump is successful in dismantling the Affordable Care Act, there is no guarantee for people who have pre-existing conditions.",Yes,CoT,No,False
-20,"If Donald Trump is successful in dismantling the Affordable Care Act, there is no guarantee for people who have pre-existing conditions.",Yes,SF,Yes,True
-20,"If Donald Trump is successful in dismantling the Affordable Care Act, there is no guarantee for people who have pre-existing conditions.",Yes,SBA_dir,Yes,True
+20,"If Donald Trump is successful in dismantling the Affordable Care Act, there is no guarantee for people who have pre-existing conditions.",Yes,SF,No,False
+20,"If Donald Trump is successful in dismantling the Affordable Care Act, there is no guarantee for people who have pre-existing conditions.",Yes,SBA_dir,No,False
 20,"If Donald Trump is successful in dismantling the Affordable Care Act, there is no guarantee for people who have pre-existing conditions.",Yes,SBA_CoT,No,False
 21,The South African Police Service kills three times more people per capita than the United States police force,Yes,DirA,Yes,True
-21,The South African Police Service kills three times more people per capita than the United States police force,Yes,CoT,No,False
+21,The South African Police Service kills three times more people per capita than the United States police force,Yes,CoT,Yes,True
 21,The South African Police Service kills three times more people per capita than the United States police force,Yes,SF,Yes,True
 21,The South African Police Service kills three times more people per capita than the United States police force,Yes,SBA_dir,Yes,True
-21,The South African Police Service kills three times more people per capita than the United States police force,Yes,SBA_CoT,No,False
+21,The South African Police Service kills three times more people per capita than the United States police force,Yes,SBA_CoT,,False
 22,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,DirA,No,True
-22,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,CoT,Yes,False
+22,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,CoT,No,True
 22,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,SF,No,True
-22,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,SBA_dir,Yes,False
+22,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,SBA_dir,No,True
 22,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,SBA_CoT,No,True
-23,Girls in the blue and white Jersey are from India's under 16 basketball team.,No,DirA,Yes,False
+23,Girls in the blue and white Jersey are from India's under 16 basketball team.,No,DirA,No,True
 23,Girls in the blue and white Jersey are from India's under 16 basketball team.,No,CoT,No,True
-23,Girls in the blue and white Jersey are from India's under 16 basketball team.,No,SF,Yes,False
+23,Girls in the blue and white Jersey are from India's under 16 basketball team.,No,SF,No,True
 23,Girls in the blue and white Jersey are from India's under 16 basketball team.,No,SBA_dir,No,True
-23,Girls in the blue and white Jersey are from India's under 16 basketball team.,No,SBA_CoT,Yes,False
+23,Girls in the blue and white Jersey are from India's under 16 basketball team.,No,SBA_CoT,No,True
 24,WHO estimates that fewer than 10% of mentally ill Nigerians have access to the care they need.,Yes,DirA,Yes,True
-24,WHO estimates that fewer than 10% of mentally ill Nigerians have access to the care they need.,Yes,CoT,No,False
+24,WHO estimates that fewer than 10% of mentally ill Nigerians have access to the care they need.,Yes,CoT,Yes,True
 24,WHO estimates that fewer than 10% of mentally ill Nigerians have access to the care they need.,Yes,SF,Yes,True
-24,WHO estimates that fewer than 10% of mentally ill Nigerians have access to the care they need.,Yes,SBA_dir,No,False
+24,WHO estimates that fewer than 10% of mentally ill Nigerians have access to the care they need.,Yes,SBA_dir,Yes,True
 24,WHO estimates that fewer than 10% of mentally ill Nigerians have access to the care they need.,Yes,SBA_CoT,Yes,True
-25,Pakistani flag waved at Congress rally.,No,DirA,No,True
-25,Pakistani flag waved at Congress rally.,No,CoT,Yes,False
-25,Pakistani flag waved at Congress rally.,No,SF,No,True
-25,Pakistani flag waved at Congress rally.,No,SBA_dir,Yes,False
-25,Pakistani flag waved at Congress rally.,No,SBA_CoT,No,True
-26,The South African Police Service kills three times more people per capita than the United States police force,Yes,DirA,Yes,True
-26,The South African Police Service kills three times more people per capita than the United States police force,Yes,CoT,No,False
-26,The South African Police Service kills three times more people per capita than the United States police force,Yes,SF,Yes,True
-26,The South African Police Service kills three times more people per capita than the United States police force,Yes,SBA_dir,Yes,True
-26,The South African Police Service kills three times more people per capita than the United States police force,Yes,SBA_CoT,No,False
-27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,DirA,Yes,True
-27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,CoT,No,False
-27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,SF,Yes,True
-27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,SBA_dir,No,False
-27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,SBA_CoT,Yes,True
-28,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,DirA,No,False
-28,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,CoT,Yes,True
-28,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SF,No,False
-28,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_dir,No,False
-28,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_CoT,Yes,True
-29,"Jack Ma said: For people in business, 2020 is really just a year for staying alive",No,DirA,No,True
-29,"Jack Ma said: For people in business, 2020 is really just a year for staying alive",No,CoT,Yes,False
-29,"Jack Ma said: For people in business, 2020 is really just a year for staying alive",No,SF,No,True
-29,"Jack Ma said: For people in business, 2020 is really just a year for staying alive",No,SBA_dir,Yes,False
-29,"Jack Ma said: For people in business, 2020 is really just a year for staying alive",No,SBA_CoT,No,True
-30,Nine percent of parents surveyed say their children have started self-harming in response to the cost of living crisis.,No,DirA,Yes,False
-30,Nine percent of parents surveyed say their children have started self-harming in response to the cost of living crisis.,No,CoT,No,True
-30,Nine percent of parents surveyed say their children have started self-harming in response to the cost of living crisis.,No,SF,Yes,False
-30,Nine percent of parents surveyed say their children have started self-harming in response to the cost of living crisis.,No,SBA_dir,No,True
-30,Nine percent of parents surveyed say their children have started self-harming in response to the cost of living crisis.,No,SBA_CoT,Yes,False
