@@ -1,0 +1,682 @@
+{
+  "punchng.com": {
+    "media": "The Punch (Nigeria) (punchng.com)",
+    "credibility": "medium",
+    "summary": "Last Updated on May 10, 2024 by Media Bias Fact Check"
+  },
+  "ilcuk.org.uk": {
+    "media": "ilcuk.org.uk",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "barnardos.org.uk": {
+    "media": "barnardos.org.uk",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "thedailybeast.com": {
+    "media": "Daily Beast (www.thedailybeast.com)",
+    "credibility": "medium",
+    "summary": "Source: https://www.thedailybeast.com/"
+  },
+  "mayoclinic.org": {
+    "media": "Mayo Clinic (www.mayoclinic.org)",
+    "credibility": "high",
+    "summary": "Last Updated on June 5, 2023 by Media Bias Fact Check"
+  },
+  "thisdaylive.com": {
+    "media": "This Day Live (thisdaylive.com)",
+    "credibility": "high",
+    "summary": "Last Updated on May 10, 2024 by Media Bias Fact Check"
+  },
+  "appropriations.house.gov": {
+    "media": "appropriations.house.gov",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "hhs.gov": {
+    "media": "hhs.gov",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "drinkaware.co.uk": {
+    "media": "drinkaware.co.uk",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "theweek.com": {
+    "media": "theweek.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "parentkind.org.uk": {
+    "media": "parentkind.org.uk",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "whatsapp.com": {
+    "media": "whatsapp.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "who.int": {
+    "media": "World Health Organization (www.who.int)",
+    "credibility": "high",
+    "summary": "Last Updated on July 1, 2023 by Media Bias Fact Check"
+  },
+  "bmj.com": {
+    "media": "The BMJ (British Medical Journal) (www.bmj.com)",
+    "credibility": "high",
+    "summary": "Last Updated on June 30, 2023 by Media Bias Fact Check"
+  },
+  "miblackbox.africa": {
+    "media": "miblackbox.africa",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "history.state.gov": {
+    "media": "history.state.gov",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "kff.org": {
+    "media": "Kaiser Family Foundation (kff.org)",
+    "credibility": "high",
+    "summary": "Source:\u00a0http://kff.org/"
+  },
+  "ntvkenya.co.ke": {
+    "media": "ntvkenya.co.ke",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "libraryir.parliament.go.ke": {
+    "media": "libraryir.parliament.go.ke",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "digido.ph": {
+    "media": "digido.ph",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "csvr.org.za": {
+    "media": "csvr.org.za",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "apnews.com": {
+    "media": "Associated Press (apnews.com)",
+    "credibility": "high",
+    "summary": "Source:\u00a0https://apnews.com/"
+  },
+  "moneyexpert.com": {
+    "media": "moneyexpert.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "ltoportal.ph": {
+    "media": "ltoportal.ph",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "etv.co.za": {
+    "media": "etv.co.za",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "huffingtonpost.co.uk": {
+    "media": "huffingtonpost.co.uk",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "lshtm.ac.uk": {
+    "media": "lshtm.ac.uk",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "alcoholchange.org.uk": {
+    "media": "alcoholchange.org.uk",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "groundup.news": {
+    "media": "groundup.news",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "theeastafrican.co.ke": {
+    "media": "theeastafrican.co.ke",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "newyorker.com": {
+    "media": "New Yorker (www.newyorker.com)",
+    "credibility": "high",
+    "summary": "Source:\u00a0https://www.newyorker.com/"
+  },
+  "washingtonpost.com": {
+    "media": "Washington Post (www.washingtonpost.com)",
+    "credibility": "high",
+    "summary": "Source:\u00a0https://www.washingtonpost.com/"
+  },
+  "13newsnow.com": {
+    "media": "WVEC \u2013 13newsnow.com",
+    "credibility": "high",
+    "summary": "Last Updated on July 1, 2023 by Media Bias Fact Check"
+  },
+  "snopes.com": {
+    "media": "Snopes (www.snopes.com)",
+    "credibility": "high",
+    "summary": "Source: https://www.snopes.com/"
+  },
+  "carandbike.com": {
+    "media": "carandbike.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "bbc.co.uk": {
+    "media": "bbc.co.uk",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "firstpost.com": {
+    "media": "First Post (www.firstpost.com)",
+    "credibility": "high",
+    "summary": "Last Updated on July 15, 2024 by Media Bias Fact Check"
+  },
+  "philkotse.com": {
+    "media": "philkotse.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "dailytrust.com": {
+    "media": "dailytrust.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "gov.za": {
+    "media": "gov.za",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "theguardian.com": {
+    "media": "The Guardian (www.theguardian.com)",
+    "credibility": "medium",
+    "summary": "Source: https://www.theguardian.com"
+  },
+  "calmatters.org": {
+    "media": "Calmatters.org",
+    "credibility": "high",
+    "summary": "Last Updated on May 17, 2023 by Media Bias Fact Check"
+  },
+  "militarytimes.com": {
+    "media": "Military Times (www.militarytimes.com)",
+    "credibility": "high",
+    "summary": "Source: https://www.militarytimes.com"
+  },
+  "edsource.org": {
+    "media": "edsource.org",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "dnalegal.com": {
+    "media": "dnalegal.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "marca.com": {
+    "media": "marca.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "dubawa.org": {
+    "media": "dubawa.org",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "aljazeera.com": {
+    "media": "Al Jazeera (www.aljazeera.com)",
+    "credibility": "medium",
+    "summary": "Source: https://www.aljazeera.com/"
+  },
+  "cnn.com": {
+    "media": "CNN (www.cnn.com)",
+    "credibility": "high",
+    "summary": "Source: https://www.cnn.com/"
+  },
+  "worldpopulationreview.com": {
+    "media": "World Population Review (worldpopulationreview.com)",
+    "credibility": "high",
+    "summary": "Source: http://worldpopulationreview.com/"
+  },
+  "theelephant.info": {
+    "media": "theelephant.info",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "smhoaxslayer.com": {
+    "media": "smhoaxslayer.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "testbook.com": {
+    "media": "testbook.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "nbcnews.com": {
+    "media": "NBC News (www.nbcnews.com)",
+    "credibility": "high",
+    "summary": "Source:\u00a0http://www.nbcnews.com/"
+  },
+  "factcheck.org": {
+    "media": "Fact Check (www.factcheck.org)",
+    "credibility": "high",
+    "summary": "Source:\u00a0https://www.factcheck.org/"
+  },
+  "motopinas.com": {
+    "media": "motopinas.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "kffhealthnews.org": {
+    "media": "kffhealthnews.org",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "aclu.org": {
+    "media": "ACLU (www.aclu.org)",
+    "credibility": "medium",
+    "summary": "Last Updated on May 6, 2024 by Media Bias Fact Check"
+  },
+  "xinhuanet.com": {
+    "media": "Xinhua News Agency (xinhuanet.com)",
+    "credibility": "low",
+    "summary": "Last Updated on November 22, 2023 by Media Bias Fact Check"
+  },
+  "acluga.org": {
+    "media": "acluga.org",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "news.gallup.com": {
+    "media": "Gallup (www.gallup.com)",
+    "credibility": "high",
+    "summary": "Source: https://news.gallup.com"
+  },
+  "trade.gov": {
+    "media": "trade.gov",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "norml.org": {
+    "media": "NORML (norml.org)",
+    "credibility": "high",
+    "summary": "Last Updated on June 23, 2024 by Media Bias Fact Check"
+  },
+  "nairobiconvention.org": {
+    "media": "nairobiconvention.org",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "thequint.com": {
+    "media": "The Quint (www.thequint.com)",
+    "credibility": "high",
+    "summary": "Last Updated on July 1, 2023 by Media Bias Fact Check"
+  },
+  "m.economictimes.com": {
+    "media": "m.economictimes.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "theprint.in": {
+    "media": "ThePrint (theprint.in)",
+    "credibility": "medium",
+    "summary": "Last Updated on January 27, 2024 by Media Bias Fact Check"
+  },
+  "timesofindia.indiatimes.com": {
+    "media": "The Times of India (timesofindia.indiatimes.com)",
+    "credibility": "medium",
+    "summary": "Last Updated on July 1, 2023 by Media Bias Fact Check"
+  },
+  "mentalhealth.org.uk": {
+    "media": "mentalhealth.org.uk",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "nation.africa": {
+    "media": "Daily Nation (nation.africa)",
+    "credibility": "medium",
+    "summary": "Last Updated on November 16, 2023 by Media Bias Fact Check"
+  },
+  "rferl.org": {
+    "media": "Radio Free Europe / Radio Liberty (www.rferl.org)",
+    "credibility": "high",
+    "summary": "Last Updated on September 3, 2023 by Media Bias Fact Check"
+  },
+  "ons.gov.uk": {
+    "media": "ons.gov.uk",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "democrats.org": {
+    "media": "Democratic National Committee (DNC) (democrats.org)",
+    "credibility": "low",
+    "summary": "Last Updated on June 13, 2024 by Media Bias Fact Check"
+  },
+  "nature.com": {
+    "media": "Nature (www.nature.com)",
+    "credibility": "high",
+    "summary": "Last Updated on June 27, 2023 by Media Bias Fact Check"
+  },
+  "usatoday.com": {
+    "media": "USA Today (www.usatoday.com)",
+    "credibility": "high",
+    "summary": "Source: https://www.usatoday.com"
+  },
+  "noi-polls.com": {
+    "media": "noi-polls.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "nyrequirements.com": {
+    "media": "nyrequirements.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "mg.co.za": {
+    "media": "Mail & Guardian (mg.co.za)",
+    "credibility": "medium",
+    "summary": "Last Updated on April 2, 2024 by Media Bias Fact Check"
+  },
+  "brookings.edu": {
+    "media": "Brookings Institute (www.brookings.edu)",
+    "credibility": "high",
+    "summary": "Source:\u00a0https://www.brookings.edu/"
+  },
+  "sultanpalace.co.ke": {
+    "media": "sultanpalace.co.ke",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "dhsprogram.com": {
+    "media": "dhsprogram.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "imperial.ac.uk": {
+    "media": "imperial.ac.uk",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "africacheck.org": {
+    "media": "Africa Check (africacheck.org)",
+    "credibility": "high",
+    "summary": "Last Updated on May 6, 2024 by Media Bias Fact Check"
+  },
+  "alanmckinnon.co.uk": {
+    "media": "alanmckinnon.co.uk",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "eng.yidaiyilu.gov.cn": {
+    "media": "eng.yidaiyilu.gov.cn",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "fiba.basketball": {
+    "media": "fiba.basketball",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "cfr.org": {
+    "media": "Council on Foreign Relations (www.cfr.org)",
+    "credibility": "high",
+    "summary": "Last Updated on April 12, 2024 by Media Bias Fact Check"
+  },
+  "en.wikipedia.org": {
+    "media": "en.wikipedia.org",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "tacomaweekly.com": {
+    "media": "tacomaweekly.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "en.sputniknews.africa": {
+    "media": "en.sputniknews.africa",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "english.scio.gov.cn": {
+    "media": "english.scio.gov.cn",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "apcof.org": {
+    "media": "apcof.org",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "quora.com": {
+    "media": "quora.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "bbc.com": {
+    "media": "BBC News (www.bbc.com)",
+    "credibility": "high",
+    "summary": "Source: https://www.bbc.com/news"
+  },
+  "euronews.com": {
+    "media": "Euronews (www.euronews.com)",
+    "credibility": "high",
+    "summary": "Source: https://www.euronews.com"
+  },
+  "telegraph.co.uk": {
+    "media": "Daily Telegraph (UK) (www.telegraph.co.uk)",
+    "credibility": "medium",
+    "summary": "Source: https://www.telegraph.co.uk"
+  },
+  "leeds-live.co.uk": {
+    "media": "leeds-live.co.uk",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "military.com": {
+    "media": "Military.com (www.military.com)",
+    "credibility": "high",
+    "summary": "Last Updated on June 5, 2023 by Media Bias Fact Check"
+  },
+  "fullfact.org": {
+    "media": "Full Fact UK (fullfact.org)",
+    "credibility": "high",
+    "summary": "Last Updated on July 30, 2024 by Media Bias Fact Check"
+  },
+  "kcl.ac.uk": {
+    "media": "kcl.ac.uk",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "abc7.com": {
+    "media": "KABC \u2013 Los Angeles News (abc7.com)",
+    "credibility": "high",
+    "summary": "Last Updated on May 26, 2023 by Media Bias Fact Check"
+  },
+  "health.org.uk": {
+    "media": "health.org.uk",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "rappler.com": {
+    "media": "Rappler (www.rappler.com)",
+    "credibility": "high",
+    "summary": "Last Updated on September 3, 2023 by Media Bias Fact Check"
+  },
+  "ndtv.com": {
+    "media": "NDTV (www.ndtv.com)",
+    "credibility": "medium",
+    "summary": "Last Updated on June 27, 2023 by Media Bias Fact Check"
+  },
+  "justice.gov": {
+    "media": "justice.gov",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "statista.com": {
+    "media": "Statista",
+    "credibility": "high",
+    "summary": "Source: https://www.statista.com"
+  },
+  "nytimes.com": {
+    "media": "New York Times (www.nytimes.com)",
+    "credibility": "high",
+    "summary": "Source:\u00a0https://www.nytimes.com/"
+  },
+  "indiatoday.in": {
+    "media": "India Today (indiatoday.in)",
+    "credibility": "medium",
+    "summary": "Last Updated on May 26, 2023 by Media Bias Fact Check"
+  },
+  "stripes.com": {
+    "media": "Stars and Stripes (www.stripes.com)",
+    "credibility": "high",
+    "summary": "Last Updated on July 17, 2023 by Media Bias Fact Check"
+  },
+  "cannamd.com": {
+    "media": "cannamd.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "forbes.com": {
+    "media": "Forbes (www.forbes.com)",
+    "credibility": "high",
+    "summary": "Source: https://www.forbes.com"
+  },
+  "facebook.com": {
+    "media": "Conservative Politics Today (facebook.com/conservativepoliticstoday)",
+    "credibility": "low",
+    "summary": "Last Updated on November 22, 2023 by Media Bias Fact Check"
+  },
+  "cambridge.org": {
+    "media": "International Organization (journals.cambridge.org)",
+    "credibility": "high",
+    "summary": "Last Updated on May 26, 2023 by Media Bias Fact Check"
+  },
+  "wired.com": {
+    "media": "BackChannel (backchannel.com)",
+    "credibility": "high",
+    "summary": "Last Updated on November 25, 2023 by Media Bias Fact Check"
+  },
+  "indiatvnews.com": {
+    "media": "India TV (indiatvnews.com)",
+    "credibility": "high",
+    "summary": "Last Updated on May 26, 2023 by Media Bias Fact Check"
+  },
+  "britannica.com": {
+    "media": "Encyclopedia Britannica (www.britannica.com)",
+    "credibility": "high",
+    "summary": "Last Updated on June 14, 2024 by Media Bias Fact Check"
+  },
+  "drugabusestatistics.org": {
+    "media": "drugabusestatistics.org",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "dailytrend.com.ng": {
+    "media": "dailytrend.com.ng",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "businesstoday.in": {
+    "media": "businesstoday.in",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "foxnews.com": {
+    "media": "foxnews.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "newsmeter.in": {
+    "media": "newsmeter.in",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "saps.gov.za": {
+    "media": "saps.gov.za",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "intelpoint.co": {
+    "media": "intelpoint.co",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "spectrumlocalnews.com": {
+    "media": "Spectrum Local News (spectrumlocalnews.com/splash)",
+    "credibility": "high",
+    "summary": "Last Updated on June 30, 2023 by Media Bias Fact Check"
+  },
+  "cdc.gov": {
+    "media": "Coronavirus.gov",
+    "credibility": "high",
+    "summary": "Last Updated on May 26, 2024 by Media Bias Fact Check"
+  },
+  "reason.com": {
+    "media": "Reason (reason.com)",
+    "credibility": "high",
+    "summary": "Source: https://reason.com/"
+  },
+  "niser.gov.ng": {
+    "media": "niser.gov.ng",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "apn.org.ng": {
+    "media": "apn.org.ng",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "ny1.com": {
+    "media": "Spectrum News \u2013 NY1 (www.ny1.com)",
+    "credibility": "high",
+    "summary": "Last Updated on July 30, 2023 by Media Bias Fact Check"
+  },
+  "npr.org": {
+    "media": "NPR (www.npr.org)",
+    "credibility": "high",
+    "summary": "Source: https://www.npr.org/"
+  },
+  "pbs.org": {
+    "media": "PBS News Hour (www.pbs.org)",
+    "credibility": "high",
+    "summary": "Source: https://www.pbs.org/newshour/"
+  },
+  "ft.com": {
+    "media": "Financial Times (www.ft.com)",
+    "credibility": "high",
+    "summary": "Source:\u00a0https://www.ft.com/"
+  },
+  "politifact.com": {
+    "media": "Politifact (www.politifact.com)",
+    "credibility": "high",
+    "summary": "Source: https://www.politifact.com/"
+  },
+  "abplive.com": {
+    "media": "abplive.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "lawandcrime.com": {
+    "media": "lawandcrime.com",
+    "credibility": "unknown",
+    "summary": ""
+  },
+  "rodra.co.za": {
+    "media": "rodra.co.za",
+    "credibility": "unknown",
+    "summary": ""
+  }
+}
