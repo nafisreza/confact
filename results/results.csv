@@ -13,7 +13,6 @@ claim_id,claim,gold_answer,strategy,prediction,correct
 3,Jailing parents was an unintended consequence of a 2010 state truancy law Kamala Harris sponsored.,Yes,CoT,Yes,True
 3,Jailing parents was an unintended consequence of a 2010 state truancy law Kamala Harris sponsored.,Yes,SF,Yes,True
 3,Jailing parents was an unintended consequence of a 2010 state truancy law Kamala Harris sponsored.,Yes,SBA_dir,Yes,True
-3,Jailing parents was an unintended consequence of a 2010 state truancy law Kamala Harris sponsored.,Yes,SBA_CoT,,False
 4,WhatsApp message lists out the COVID-19 situation in various countries along with travel restrictions and lockdowns.,No,DirA,Yes,False
 4,WhatsApp message lists out the COVID-19 situation in various countries along with travel restrictions and lockdowns.,No,CoT,Yes,False
 4,WhatsApp message lists out the COVID-19 situation in various countries along with travel restrictions and lockdowns.,No,SF,Yes,False
@@ -23,7 +22,6 @@ claim_id,claim,gold_answer,strategy,prediction,correct
 5,"In 2017, there were more marijuana arrests in this country than all violent crime arrests combined.",Yes,CoT,Yes,True
 5,"In 2017, there were more marijuana arrests in this country than all violent crime arrests combined.",Yes,SF,Yes,True
 5,"In 2017, there were more marijuana arrests in this country than all violent crime arrests combined.",Yes,SBA_dir,Yes,True
-5,"In 2017, there were more marijuana arrests in this country than all violent crime arrests combined.",Yes,SBA_CoT,,False
 6,Saudi Arabia players to get a Rolls-Royce each for defeating Argentina.,No,DirA,No,True
 6,Saudi Arabia players to get a Rolls-Royce each for defeating Argentina.,No,CoT,No,True
 6,Saudi Arabia players to get a Rolls-Royce each for defeating Argentina.,No,SF,No,True
@@ -67,8 +65,6 @@ claim_id,claim,gold_answer,strategy,prediction,correct
 14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,DirA,Yes,True
 14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,CoT,Yes,True
 14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SF,Yes,True
-14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_dir,,False
-14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_CoT,,False
 15,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,DirA,No,True
 15,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,CoT,No,True
 15,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,SF,No,True
@@ -82,7 +78,6 @@ claim_id,claim,gold_answer,strategy,prediction,correct
 17,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,DirA,No,False
 17,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,CoT,No,False
 17,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SF,No,False
-17,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_dir,,False
 17,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_CoT,No,False
 18,Life expectancy in the UK is falling.,No,DirA,Yes,False
 18,Life expectancy in the UK is falling.,No,CoT,Yes,False
@@ -103,7 +98,6 @@ claim_id,claim,gold_answer,strategy,prediction,correct
 21,The South African Police Service kills three times more people per capita than the United States police force,Yes,CoT,Yes,True
 21,The South African Police Service kills three times more people per capita than the United States police force,Yes,SF,Yes,True
 21,The South African Police Service kills three times more people per capita than the United States police force,Yes,SBA_dir,Yes,True
-21,The South African Police Service kills three times more people per capita than the United States police force,Yes,SBA_CoT,,False
 22,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,DirA,No,True
 22,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,CoT,No,True
 22,Nigeria has a population of 200 million and there are less than 150 psychiatrists in the country.,No,SF,No,True
@@ -119,3 +113,39 @@ claim_id,claim,gold_answer,strategy,prediction,correct
 24,WHO estimates that fewer than 10% of mentally ill Nigerians have access to the care they need.,Yes,SF,Yes,True
 24,WHO estimates that fewer than 10% of mentally ill Nigerians have access to the care they need.,Yes,SBA_dir,Yes,True
 24,WHO estimates that fewer than 10% of mentally ill Nigerians have access to the care they need.,Yes,SBA_CoT,Yes,True
+25,Pakistani flag waved at Congress rally.,No,DirA,No,True
+25,Pakistani flag waved at Congress rally.,No,CoT,No,True
+25,Pakistani flag waved at Congress rally.,No,SF,No,True
+25,Pakistani flag waved at Congress rally.,No,SBA_dir,No,True
+3,Jailing parents was an unintended consequence of a 2010 state truancy law Kamala Harris sponsored.,Yes,SBA_CoT,Yes,True
+5,"In 2017, there were more marijuana arrests in this country than all violent crime arrests combined.",Yes,SBA_CoT,Yes,True
+14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_dir,Yes,True
+14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_CoT,,False
+17,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_dir,No,False
+21,The South African Police Service kills three times more people per capita than the United States police force,Yes,SBA_CoT,Yes,True
+25,Pakistani flag waved at Congress rally.,No,SBA_CoT,No,True
+26,The South African Police Service kills three times more people per capita than the United States police force,Yes,DirA,Yes,True
+26,The South African Police Service kills three times more people per capita than the United States police force,Yes,CoT,Yes,True
+26,The South African Police Service kills three times more people per capita than the United States police force,Yes,SF,Yes,True
+26,The South African Police Service kills three times more people per capita than the United States police force,Yes,SBA_dir,Yes,True
+26,The South African Police Service kills three times more people per capita than the United States police force,Yes,SBA_CoT,,False
+27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,DirA,,False
+27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,CoT,,False
+27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,SF,Yes,True
+27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,SBA_dir,Yes,True
+27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,SBA_CoT,,False
+28,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,DirA,Yes,True
+28,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,CoT,Yes,True
+28,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SF,Yes,True
+28,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_dir,Yes,True
+28,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_CoT,Yes,True
+29,"Jack Ma said: For people in business, 2020 is really just a year for staying alive",No,DirA,No,True
+29,"Jack Ma said: For people in business, 2020 is really just a year for staying alive",No,CoT,No,True
+29,"Jack Ma said: For people in business, 2020 is really just a year for staying alive",No,SF,No,True
+29,"Jack Ma said: For people in business, 2020 is really just a year for staying alive",No,SBA_dir,No,True
+29,"Jack Ma said: For people in business, 2020 is really just a year for staying alive",No,SBA_CoT,No,True
+30,Nine percent of parents surveyed say their children have started self-harming in response to the cost of living crisis.,No,DirA,No,True
+30,Nine percent of parents surveyed say their children have started self-harming in response to the cost of living crisis.,No,CoT,No,True
+30,Nine percent of parents surveyed say their children have started self-harming in response to the cost of living crisis.,No,SF,No,True
+30,Nine percent of parents surveyed say their children have started self-harming in response to the cost of living crisis.,No,SBA_dir,No,True
+30,Nine percent of parents surveyed say their children have started self-harming in response to the cost of living crisis.,No,SBA_CoT,No,True

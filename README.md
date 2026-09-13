@@ -146,10 +146,12 @@ and `GROQ_REASONING_EFFORT=none` (visible `<think>` blocks otherwise consume
 the output-token budget before the final `Answer:` line). Groq's free tier
 caps both output tokens per minute (1,000 — which also bounds `max_tokens`
 per request) and tokens per day (200,000 — less than a full 150-call run),
-so the run covers the first **24 of the 30 claims**; a handful of long
-source-aware responses were truncated at the token cap and score as
-unparsed/incorrect. `python run_experiment.py --resume` re-runs exactly the
-missing and unparsed (claim, strategy) pairs once quota is available.
+so the full 30-claim run was completed across two days via
+`python run_experiment.py --resume`, which re-runs exactly the missing and
+unparsed (claim, strategy) pairs once quota is available. A few long
+source-aware responses (3/30 for SBA_CoT) still truncate at the per-request
+token cap and score as unparsed/incorrect — this systematically penalizes
+the CoT-style strategies and is flagged in the limitations.
 
 ## 5. Demoing the project
 
