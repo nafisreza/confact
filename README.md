@@ -150,9 +150,9 @@ so the full 30-claim run was completed across multiple sessions via
 `python run_experiment.py --resume`, which re-runs exactly the missing and
 unparsed (claim, strategy) pairs once quota is available. Responses that
 truncated at the per-request token cap were re-sampled the same way rather
-than scored; at the time of writing 148/150 (claim, strategy) pairs have a
-parsed prediction (2 pending on quota — the per-strategy `n` column in
-`results_summary.csv` is authoritative).
+than scored; 149/150 (claim, strategy) pairs have a parsed prediction. The
+one remaining SBA_CoT response truncates at the cap on every re-sample and
+is scored as incorrect (the paper's treatment of unparseable answers).
 
 ## 5. Demoing the project
 

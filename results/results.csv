@@ -147,3 +147,5 @@ claim_id,claim,gold_answer,strategy,prediction,correct
 14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_CoT,Yes,True
 26,The South African Police Service kills three times more people per capita than the United States police force,Yes,SBA_CoT,Yes,True
 27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,DirA,Yes,True
+27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,CoT,Yes,True
+27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,SBA_CoT,,False
