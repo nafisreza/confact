@@ -120,7 +120,6 @@ claim_id,claim,gold_answer,strategy,prediction,correct
 3,Jailing parents was an unintended consequence of a 2010 state truancy law Kamala Harris sponsored.,Yes,SBA_CoT,Yes,True
 5,"In 2017, there were more marijuana arrests in this country than all violent crime arrests combined.",Yes,SBA_CoT,Yes,True
 14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_dir,Yes,True
-14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_CoT,,False
 17,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_dir,No,False
 21,The South African Police Service kills three times more people per capita than the United States police force,Yes,SBA_CoT,Yes,True
 25,Pakistani flag waved at Congress rally.,No,SBA_CoT,No,True
@@ -128,12 +127,8 @@ claim_id,claim,gold_answer,strategy,prediction,correct
 26,The South African Police Service kills three times more people per capita than the United States police force,Yes,CoT,Yes,True
 26,The South African Police Service kills three times more people per capita than the United States police force,Yes,SF,Yes,True
 26,The South African Police Service kills three times more people per capita than the United States police force,Yes,SBA_dir,Yes,True
-26,The South African Police Service kills three times more people per capita than the United States police force,Yes,SBA_CoT,,False
-27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,DirA,,False
-27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,CoT,,False
 27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,SF,Yes,True
 27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,SBA_dir,Yes,True
-27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,SBA_CoT,,False
 28,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,DirA,Yes,True
 28,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,CoT,Yes,True
 28,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SF,Yes,True
@@ -149,3 +144,6 @@ claim_id,claim,gold_answer,strategy,prediction,correct
 30,Nine percent of parents surveyed say their children have started self-harming in response to the cost of living crisis.,No,SF,No,True
 30,Nine percent of parents surveyed say their children have started self-harming in response to the cost of living crisis.,No,SBA_dir,No,True
 30,Nine percent of parents surveyed say their children have started self-harming in response to the cost of living crisis.,No,SBA_CoT,No,True
+14,"Nigeria has an estimated physician-patient ratio of one doctor to every 4,000 to 5,000 patients.",Yes,SBA_CoT,Yes,True
+26,The South African Police Service kills three times more people per capita than the United States police force,Yes,SBA_CoT,Yes,True
+27,2.5 million passengers have travelled using Kenyan Madaraka Express since its inception in May 2018.,Yes,DirA,Yes,True
