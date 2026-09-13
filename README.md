@@ -139,6 +139,18 @@ limit, so a full run takes a few minutes). The model defaults to
 `qwen/qwen3.8-27b`; set `GROQ_MODEL` to any model id from
 https://console.groq.com/docs/models to try another.
 
+### Actual run configuration behind `results/`
+
+The committed results were produced with `GROQ_MODEL=qwen/qwen3.6-27b`
+and `GROQ_REASONING_EFFORT=none` (visible `<think>` blocks otherwise consume
+the output-token budget before the final `Answer:` line). Groq's free tier
+caps both output tokens per minute (1,000 — which also bounds `max_tokens`
+per request) and tokens per day (200,000 — less than a full 150-call run),
+so the run covers the first **24 of the 30 claims**; a handful of long
+source-aware responses were truncated at the token cap and score as
+unparsed/incorrect. `python run_experiment.py --resume` re-runs exactly the
+missing and unparsed (claim, strategy) pairs once quota is available.
+
 ## 5. Demoing the project
 
 `results/demo.html` is a self-contained, offline page for presenting —

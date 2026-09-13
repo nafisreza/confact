@@ -37,9 +37,12 @@ def _load_dotenv():
 _load_dotenv()
 
 MODEL = os.environ.get("GROQ_MODEL", "qwen/qwen3.8-27b")
-# Generous cap: Qwen-3's chain-of-thought answers regularly exceed 700 tokens,
-# and truncation cuts off the final "Answer: Yes/No" line the parser needs.
-MAX_TOKENS = 2000
+# Cap chosen against two constraints: chain-of-thought answers need room for
+# the final "Answer: Yes/No" line (700 truncated them), while Groq's free tier
+# rejects any request whose max_tokens exceeds the per-minute output limit
+# (1000 for the qwen3 models). Keep reasoning blocks disabled via
+# GROQ_REASONING_EFFORT=none so answers fit comfortably.
+MAX_TOKENS = 1000
 # Free-tier rate limits are ~30 requests/min; keep a small gap between calls.
 _MIN_SECONDS_BETWEEN_CALLS = 2.1
 _last_call_time = 0.0
@@ -49,8 +52,15 @@ if not _MOCK_MODE:
     from groq import Groq
     _client = Groq()
 
+# For reasoning models (e.g. Qwen-3), GROQ_REASONING_EFFORT=none suppresses
+# <think> blocks, which otherwise burn the token budget before the final
+# "Answer:" line. Left unset, the parameter is not sent at all.
+_EXTRA_PARAMS = {}
+if os.environ.get("GROQ_REASONING_EFFORT"):
+    _EXTRA_PARAMS["reasoning_effort"] = os.environ["GROQ_REASONING_EFFORT"]
 
-def call_llm(prompt, model=MODEL, max_tokens=MAX_TOKENS, retries=3):
+
+def call_llm(prompt, model=MODEL, max_tokens=MAX_TOKENS, retries=4):
     if _MOCK_MODE:
         return _mock_response(prompt)
 
@@ -62,11 +72,13 @@ def call_llm(prompt, model=MODEL, max_tokens=MAX_TOKENS, retries=3):
                 model=model,
                 max_tokens=max_tokens,
                 messages=[{"role": "user", "content": prompt}],
+                **_EXTRA_PARAMS,
             )
             return resp.choices[0].message.content
         except Exception as e:  # noqa: BLE001
             last_err = e
-            time.sleep(2 ** attempt)
+            # Per-minute rate-limit windows need patient waits, not seconds.
+            time.sleep(20 * (attempt + 1))
     raise RuntimeError(
         f"LLM call failed after {retries} attempts: {last_err}\n"
         f"Check that GROQ_MODEL={model!r} is a valid model id "
